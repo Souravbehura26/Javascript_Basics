@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Variables</title>
+</head>
+<body>
+    <script>
+        // string="sourav","react"
+        // number=10,22.5
+        // boolean=true,false
+        // null
+        // undefined
+        var num=10.5
+        document.write(typeof(num))
+        document.write(num);
+        document.write("<br>");
+        var bool=true
+        document.write(typeof(bool))
+        document.write(bool);
+        document.write("<br>");
+        var str="javascript"
+        document.write(typeof(str))//string
+        document.write(str);
+        document.write("<br>");
+        var undef
+        document.write(typeof(undef))
+        document.write(undef);
+        document.write("<br>");
+        //document.write("<h1>Variables</h1>");
+
+        //defining variables using var keyword(functional scope)
+        //to initialize the value var keyword is used once
+        //then var keyword can be used anywhere to change the value
+        //whenever value is changed using, then the changed value will be reflected nextwards
+        var a=10,b=50;
+        var b=30;
+        if(a<b)
+        {
+                var a=60;
+                document.write(a);//60
+                document.write(b);//30 
+        }
+        document.write(a);//60
+        document.write(b);//30
+        document.write("<br>");
+        
+        //defining variables using let keyword(block scope )
+        //to initialize the value let keyword is used once
+        //then let keyword is used to change the value,but can be only used inside encapsuled code
+        //outside capsulated code, the value is reflected as initialized value
+        let c=20,d=40;
+        if(c<d)
+        {
+            let c=30;
+            let d=50;
+
+            document.write(c);//30
+            document.write(d);//50
+        }
+        document.write(c);//20
+        document.write(d);//40
+        document.write("<br>");
+
+        //defining variables using const keyword
+        //the functionality of both let and const keywords are same
+        const e=15,f=25;
+        if(e<f)
+        {
+            const e=35;
+            const f=45;
+            document.write(e);//35
+            document.write(f);//45
+        }
+        document.write(e);//15
+        document.write(f);//25
+
+    </script>
+</body>
+</html>

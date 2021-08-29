@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Function</title>
+</head>
+<body>
+    <script>
+        //regular function
+        function myFun1()
+        {
+            document.write("hello from myFun1");
+        }
+        myFun1();
+        document.write("<br>");
+
+        //arrow function
+        myFun2 =()=>
+        {
+            document.write("hello from myFun2");
+        }
+        myFun2();
+        document.write("<br>");
+
+        //passing parameters in regular function
+        function myFun3(a,b)
+        {
+            document.write("value of a= "+a+" "+"value of b= "+b);//5 10
+        }
+        myFun3(5,10);
+        document.write("<br>");
+
+        //passing parameters in arrow function
+        myFun4 =(c,d)=>
+        {
+            document.write("value of c= "+c+" "+"value of d= "+d);//15 20
+        }
+        myFun4(15,20);
+        document.write("<br>");
+
+        //passing return values in regular function
+        function myFun5(e,f,g)
+        {
+            var sum1=e+f+g;
+            document.write("Sum inside function= "+sum1);//30
+            return sum1;
+        }
+        total1=myFun5(5,10,15);
+        document.write("Sum outside function= "+total1);//30
+        document.write("<br>");
+
+        //passing return values in arrow function
+        myFun6 =(h,i,j)=>
+        {
+            var sum2=h+i+j;
+            document.write("Sum inside function= "+sum2);//75
+            return sum2;
+        }
+        total2=myFun5(20,25,30);
+        document.write("Sum outside function= "+total2);//75
+        document.write("<br>");
+
+        //default parameters
+        myFun7 =(k=50,l=60)=>
+        {
+            var l=70;//local variable
+            document.write("value of k= "+k+" "+"value of l= "+l);//40 60
+        }
+        myFun7(40);
+        document.write("<br>");
+        
+        //rest parameters 
+        myFun8 =(m,n,...args)=>
+        {
+            document.write(m+" "+n+" "+args);
+        }
+        myFun8(1,2,3,4,5);
+        
+    </script>
+</body>
+</html>

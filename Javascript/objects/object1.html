@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        //1.Object using Constructor
+        class student
+        {
+            constructor()
+            {
+                this.fname="sourav";
+                this.lname="behura";
+                //regular function
+                this.show=function()
+                {
+                    return this.fname;
+                }
+            }
+        }
+        var obj1=new student();
+        //document.write(obj1);
+        console.log(obj1);
+        document.write(obj1.fname);
+        document.write(obj1.show());
+        document.write("<br>");
+
+        class student1
+        {
+            constructor()
+            {
+                this.fname="sourav"
+                this.lname="behura"
+                //array function
+                this.show=()=>
+                {
+                    return this.fname;
+                }
+            }
+        }
+        var obj2=new student1();
+        //document.write(obj2);
+        console.log(obj2);
+        document.write(obj2.fname);
+        document.write(obj2.show());
+        document.write("<br>");
+
+        //2. Object using "Object" keyword
+        const obj3=new Object();
+        obj3.name="sourav"
+        obj3.city="bbsr"
+        obj3.show=function()
+        {
+            return this.name;
+        }
+        document.write(obj3.show());
+        document.write(obj3.city);
+        document.write("<br>");
+
+        const obj4=new Object();
+        obj4.name="sourav"
+        obj4.city="bbsr"
+        obj4.show=()=>
+        {
+            return this.name;
+        }
+        document.write(obj4.show());
+        document.write("<br>");
+
+    </script>
+</body>
+</html>
